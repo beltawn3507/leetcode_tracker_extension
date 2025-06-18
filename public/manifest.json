@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode User Tracker",
+  "description": "Track and save LeetCode profiles",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icons/icon.png"
+  },
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://leetcode.com/u/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/u/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
